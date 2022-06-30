@@ -1,5 +1,6 @@
 //
 //  Barrel file for the screen files
+library screens;
 
 export 'chat_screen.dart';
 export 'child_profile_screen.dart';
