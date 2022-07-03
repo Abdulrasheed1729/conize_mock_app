@@ -2,6 +2,23 @@
 
 A new Flutter project.
 
+#### Todos
+
+|Todos|
+|------|
+| Convert to feature first layer bloc pattern|
+|Refactor the screens folder to each of their teir feature folder|
+|Refactor the widgets folder to each of their teir feature folder|
+
+### Packages
+|Packages|
+|---------|
+|flutter_svg: ^1.1.0|
+|flutter_bloc: //TODO|
+|equatable: //TODO|
+|bloc: //TODO|
+|and some other possible additional packages too :)|
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

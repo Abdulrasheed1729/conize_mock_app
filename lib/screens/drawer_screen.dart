@@ -1,7 +1,7 @@
 import 'package:conize_mock_app/widgets/widets.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import '../app/utils/colors.dart';
 
 class DrawerScreen extends StatelessWidget {
   const DrawerScreen({

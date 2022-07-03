@@ -1,4 +1,4 @@
-import 'package:conize_mock_app/utils/colors.dart';
+import 'package:conize_mock_app/app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
