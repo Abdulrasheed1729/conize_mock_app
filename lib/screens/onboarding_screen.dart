@@ -103,7 +103,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 vertical: 20,
               ),
               child: _isLastPage
-                  ? const AuthButton(label: 'GET STARTED')
+                  ? AuthButton(
+                      label: 'GET STARTED',
+                      onTap: () => Navigator.of(context).pushNamed('/sign-in'),
+                    )
                   : Row(
                       children: [
                         TextButton(

@@ -6,13 +6,19 @@ class InputTextBox extends StatelessWidget {
     Key? key,
     this.label,
     this.suffixWidget,
+    this.obscureText = false,
+    this.keyboardType = TextInputType.text,
   }) : super(key: key);
   final String? label;
   final Widget? suffixWidget;
+  final bool obscureText;
+  final TextInputType keyboardType;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      keyboardType: keyboardType,
+      obscureText: obscureText,
       decoration: InputDecoration(
         suffixIcon: suffixWidget,
         labelText: label,

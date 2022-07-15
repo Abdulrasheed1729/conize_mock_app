@@ -2,11 +2,10 @@ import 'package:conize_mock_app/app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class AuthButton extends StatelessWidget {
-  const AuthButton({
-    Key? key,
-    required this.label,
-  }) : super(key: key);
+  const AuthButton({Key? key, required this.label, this.onTap})
+      : super(key: key);
   final String label;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class AuthButton extends StatelessWidget {
       ),
       constraints: const BoxConstraints(minHeight: 50.0),
       fillColor: AppColors.kSecondaryColor,
-      onPressed: () {},
+      onPressed: onTap,
       child: Center(
         child: Text(
           label,

@@ -23,7 +23,7 @@ class ChildProfileScreen extends StatelessWidget {
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context).pop(),
                       icon: const Icon(
                         Icons.chevron_left_rounded,
                         size: 30,
@@ -31,21 +31,24 @@ class ChildProfileScreen extends StatelessWidget {
                       color: AppColors.kPrimaryColor,
                     ),
                     Expanded(child: Container()),
-                    Container(
-                      height: 30,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: AppColors.kSecondaryColor,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'SAVE',
-                          style: TextStyle(
-                            color: AppColors.kTextBoxIconColor,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Inter',
-                            fontSize: 14,
+                    GestureDetector(
+                      onTap: () => Navigator.of(context).pushNamed('/feeds'),
+                      child: Container(
+                        height: 30,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          color: AppColors.kSecondaryColor,
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'SAVE',
+                            style: TextStyle(
+                              color: AppColors.kTextBoxIconColor,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Inter',
+                              fontSize: 14,
+                            ),
                           ),
                         ),
                       ),

@@ -82,87 +82,91 @@ class _FeedScreenState extends State<FeedScreen> {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 170,
-                      padding: const EdgeInsets.all(15.0),
+                    DecoratedBox(
+                      // height: 170,
+                      // padding: const EdgeInsets.all(15.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/mother.jpg'),
-                                radius: 20,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Row(
+                              children: [
+                                const CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/mother.jpg'),
+                                  radius: 20,
+                                ),
+                                const SizedBox(width: 5),
+                                const Text(
+                                  'You',
+                                  style: TextStyle(
+                                    color: AppColors.kTextBoxLabelColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Expanded(child: Container()),
+                                const Text(
+                                  '1 week',
+                                  style: TextStyle(
+                                    color: AppColors.kPrimaryColor,
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
+                              'Immunization',
+                              style: TextStyle(
+                                color: AppColors.kPrimaryColor,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: 'Inter',
                               ),
-                              const SizedBox(width: 5),
-                              const Text(
-                                'You',
-                                style: TextStyle(
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Aaron won\'t be able to see you this week. Got the smallpox jab.',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w100,
+                                fontFamily: 'Inter',
+                              ),
+                            ),
+                            const SizedBox(height: 5),
+                            Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(child: Container()),
+                                SvgPicture.asset(
+                                  'assets/icons/Like feed.svg',
+                                  height: 25,
+                                  width: 25,
                                   color: AppColors.kTextBoxLabelColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
                                 ),
-                              ),
-                              Expanded(child: Container()),
-                              const Text(
-                                '1 week',
-                                style: TextStyle(
-                                  color: AppColors.kPrimaryColor,
+                                const SizedBox(height: 15),
+                                SvgPicture.asset(
+                                  'assets/icons/Reply feed.svg',
+                                  height: 25,
+                                  width: 25,
+                                  color: AppColors.kTextBoxLabelColor,
                                 ),
-                              )
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Immunization',
-                            style: TextStyle(
-                              color: AppColors.kPrimaryColor,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: 'Inter',
-                            ),
-                          ),
-                          const SizedBox(height: 5),
-                          const Text(
-                            'Aaron won\'t be able to see you this week. Got\nthe smallpox jab.',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w100,
-                              fontFamily: 'Inter',
-                            ),
-                          ),
-                          const SizedBox(height: 5),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(child: Container()),
-                              SvgPicture.asset(
-                                'assets/icons/Like feed.svg',
-                                height: 25,
-                                width: 25,
-                                color: AppColors.kTextBoxLabelColor,
-                              ),
-                              const SizedBox(height: 15),
-                              SvgPicture.asset(
-                                'assets/icons/Reply feed.svg',
-                                height: 25,
-                                width: 25,
-                                color: AppColors.kTextBoxLabelColor,
-                              ),
-                              const SizedBox(height: 15),
-                              SvgPicture.asset(
-                                'assets/icons/Star/bookmark feed.svg',
-                                height: 25,
-                                width: 25,
-                                color: AppColors.kTextBoxLabelColor,
-                              ),
-                            ],
-                          )
-                        ],
+                                const SizedBox(height: 15),
+                                SvgPicture.asset(
+                                  'assets/icons/Star/bookmark feed.svg',
+                                  height: 25,
+                                  width: 25,
+                                  color: AppColors.kTextBoxLabelColor,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -174,86 +178,89 @@ class _FeedScreenState extends State<FeedScreen> {
                   borderRadius: BorderRadius.circular(15.0),
                 ),
                 elevation: 5.0,
-                child: Container(
-                  height: 170,
-                  padding: const EdgeInsets.all(15.0),
+                child: DecoratedBox(
+                  // height: 170,
+                  // padding: const EdgeInsets.all(15.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Row(
-                        children: [
-                          const CircleAvatar(
-                            backgroundImage: AssetImage('assets/kunle.jpg'),
-                            radius: 20,
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Row(
+                          children: [
+                            const CircleAvatar(
+                              backgroundImage: AssetImage('assets/kunle.jpg'),
+                              radius: 20,
+                            ),
+                            const SizedBox(width: 5),
+                            const Text(
+                              'Kunle',
+                              style: TextStyle(
+                                color: AppColors.kTextBoxLabelColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Expanded(child: Container()),
+                            const Text(
+                              '40 mins',
+                              style: TextStyle(
+                                color: AppColors.kPrimaryColor,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'Got a week leave',
+                          style: TextStyle(
+                            color: AppColors.kPrimaryColor,
+                            fontSize: 14,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w700,
                           ),
-                          const SizedBox(width: 5),
-                          const Text(
-                            'Kunle',
-                            style: TextStyle(
+                        ),
+                        const SizedBox(height: 5),
+                        const Text(
+                          'Aaron wants to stay for few more days, since I\'m off work. Ok with you?',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w100,
+                            fontFamily: 'Inter',
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(child: Container()),
+                            SvgPicture.asset(
+                              'assets/icons/Like feed.svg',
+                              height: 25,
+                              width: 25,
                               color: AppColors.kTextBoxLabelColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
                             ),
-                          ),
-                          Expanded(child: Container()),
-                          const Text(
-                            '40 mins',
-                            style: TextStyle(
-                              color: AppColors.kPrimaryColor,
+                            const SizedBox(height: 15),
+                            SvgPicture.asset(
+                              'assets/icons/Reply feed.svg',
+                              height: 25,
+                              width: 25,
+                              color: AppColors.kTextBoxLabelColor,
                             ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 10),
-                      const Text(
-                        'Got a week leave',
-                        style: TextStyle(
-                          color: AppColors.kPrimaryColor,
-                          fontSize: 14,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      const SizedBox(height: 5),
-                      const Text(
-                        'Aaron wants to stay for few more days, since \nI\'m off work. Ok with you?',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w100,
-                          fontFamily: 'Inter',
-                        ),
-                      ),
-                      const SizedBox(height: 5),
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(child: Container()),
-                          SvgPicture.asset(
-                            'assets/icons/Like feed.svg',
-                            height: 25,
-                            width: 25,
-                            color: AppColors.kTextBoxLabelColor,
-                          ),
-                          const SizedBox(height: 15),
-                          SvgPicture.asset(
-                            'assets/icons/Reply feed.svg',
-                            height: 25,
-                            width: 25,
-                            color: AppColors.kTextBoxLabelColor,
-                          ),
-                          const SizedBox(height: 15),
-                          SvgPicture.asset(
-                            'assets/icons/Star/bookmark feed.svg',
-                            height: 25,
-                            width: 25,
-                            color: AppColors.kTextBoxLabelColor,
-                          ),
-                        ],
-                      )
-                    ],
+                            const SizedBox(height: 15),
+                            SvgPicture.asset(
+                              'assets/icons/Star/bookmark feed.svg',
+                              height: 25,
+                              width: 25,
+                              color: AppColors.kTextBoxLabelColor,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -278,87 +285,90 @@ class _FeedScreenState extends State<FeedScreen> {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 170,
-                      padding: const EdgeInsets.all(15.0),
+                    DecoratedBox(
+                      // height: 170,
+                      // padding: const EdgeInsets.all(15.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/mother.jpg'),
-                                radius: 20,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Row(
+                              children: [
+                                const CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/mother.jpg'),
+                                  radius: 20,
+                                ),
+                                const SizedBox(width: 5),
+                                const Text(
+                                  'You',
+                                  style: TextStyle(
+                                    color: AppColors.kTextBoxLabelColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Expanded(child: Container()),
+                                const Text(
+                                  '40 mins',
+                                  style: TextStyle(
+                                    color: AppColors.kPrimaryColor,
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
+                              'Bicycle',
+                              style: TextStyle(
+                                color: AppColors.kPrimaryColor,
+                                fontSize: 14,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w700,
                               ),
-                              const SizedBox(width: 5),
-                              const Text(
-                                'You',
-                                style: TextStyle(
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Aaron\'s been asking for a bicycle, can\'t afford one now. If you\'re able to, it\'ll be great.',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w100,
+                                fontFamily: 'Inter',
+                              ),
+                            ),
+                            const SizedBox(height: 5),
+                            Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(child: Container()),
+                                SvgPicture.asset(
+                                  'assets/icons/Like feed.svg',
+                                  height: 25,
+                                  width: 25,
                                   color: AppColors.kTextBoxLabelColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
                                 ),
-                              ),
-                              Expanded(child: Container()),
-                              const Text(
-                                '40 mins',
-                                style: TextStyle(
-                                  color: AppColors.kPrimaryColor,
+                                const SizedBox(height: 15),
+                                SvgPicture.asset(
+                                  'assets/icons/Reply feed.svg',
+                                  height: 25,
+                                  width: 25,
+                                  color: AppColors.kTextBoxLabelColor,
                                 ),
-                              )
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Bicycle',
-                            style: TextStyle(
-                              color: AppColors.kPrimaryColor,
-                              fontSize: 14,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          const SizedBox(height: 5),
-                          const Text(
-                            'Aaron\'s been asking for a bicycle, can\'t afford\none now. If you\'re able to, it\'ll be great.',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w100,
-                              fontFamily: 'Inter',
-                            ),
-                          ),
-                          const SizedBox(height: 5),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(child: Container()),
-                              SvgPicture.asset(
-                                'assets/icons/Like feed.svg',
-                                height: 25,
-                                width: 25,
-                                color: AppColors.kTextBoxLabelColor,
-                              ),
-                              const SizedBox(height: 15),
-                              SvgPicture.asset(
-                                'assets/icons/Reply feed.svg',
-                                height: 25,
-                                width: 25,
-                                color: AppColors.kTextBoxLabelColor,
-                              ),
-                              const SizedBox(height: 15),
-                              SvgPicture.asset(
-                                'assets/icons/Star/bookmark feed.svg',
-                                height: 25,
-                                width: 25,
-                                color: AppColors.kTextBoxLabelColor,
-                              ),
-                            ],
-                          )
-                        ],
+                                const SizedBox(height: 15),
+                                SvgPicture.asset(
+                                  'assets/icons/Star/bookmark feed.svg',
+                                  height: 25,
+                                  width: 25,
+                                  color: AppColors.kTextBoxLabelColor,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -402,9 +412,12 @@ class _FeedScreenState extends State<FeedScreen> {
             ),
             label: 'Discover',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(
-              Icons.mail_outline_rounded,
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () => Navigator.of(context).pushNamed('/chat'),
+              child: const Icon(
+                Icons.mail_outline_rounded,
+              ),
             ),
             label: 'Message',
           ),

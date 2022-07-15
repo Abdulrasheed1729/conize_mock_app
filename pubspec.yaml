@@ -27,11 +27,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bloc: ^8.0.3
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.3
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
   flutter_svg: ^1.1.0
   smooth_page_indicator: ^1.0.0+2
+  very_good_analysis: ^3.0.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -69,13 +73,13 @@ flutter:
   fonts:
     - family: Inter
       fonts:
-        - asset:  assets/fonts/Inter/Inter-Regular.ttf
-        - asset:  assets/fonts/Inter/Inter-Light.ttf
-        - asset:  assets/fonts/Inter/Inter-Medium.ttf
-        - asset:  assets/fonts/Inter/Inter-Bold.ttf
+        - asset: assets/fonts/Inter/Inter-Regular.ttf
+        - asset: assets/fonts/Inter/Inter-Light.ttf
+        - asset: assets/fonts/Inter/Inter-Medium.ttf
+        - asset: assets/fonts/Inter/Inter-Bold.ttf
     - family: Varela_Round
       fonts:
-        - asset:  assets/fonts/Varela_Round/VarelaRound-Regular.ttf
+        - asset: assets/fonts/Varela_Round/VarelaRound-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

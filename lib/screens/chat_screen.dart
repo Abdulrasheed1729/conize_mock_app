@@ -21,13 +21,14 @@ class ChatScreen extends StatelessWidget {
               Row(
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).pop(),
                     icon: const Icon(
                       Icons.chevron_left_rounded,
                       size: 30,
                     ),
                     color: AppColors.kPrimaryColor,
                   ),
+                  const SizedBox(width: 10),
                   const CircleAvatar(
                     backgroundImage: AssetImage('assets/kunle.jpg'),
                     radius: 20.0,

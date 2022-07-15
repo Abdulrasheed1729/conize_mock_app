@@ -1,3 +1,4 @@
+import 'package:conize_mock_app/app/app.dart';
 import 'package:conize_mock_app/widgets/widets.dart';
 import 'package:flutter/material.dart';
 
@@ -65,7 +66,11 @@ class DrawerScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 5),
-                    const Icon(Icons.add),
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.of(context).pushNamed('/child-profile'),
+                      child: const Icon(Icons.add),
+                    ),
                   ],
                 ),
                 Row(
@@ -118,9 +123,12 @@ class DrawerScreen extends StatelessWidget {
                   svgUrl: 'assets/icons/About us.svg',
                   desc: 'About Us',
                 ),
-                const DrawerScreenTile(
-                  svgUrl: 'assets/icons/Premium.svg',
-                  desc: 'Go Premium',
+                InkWell(
+                  onTap: () => Navigator.of(context).pushNamed('/offers'),
+                  child: const DrawerScreenTile(
+                    svgUrl: 'assets/icons/Premium.svg',
+                    desc: 'Go Premium',
+                  ),
                 ),
                 const SizedBox(height: 10),
                 const Divider(
@@ -128,16 +136,60 @@ class DrawerScreen extends StatelessWidget {
                   color: AppColors.kSecondaryColor,
                 ),
                 const SizedBox(height: 20),
-                const TerminationTile(
-                  svgUrl: 'assets/icons/Logout.svg',
-                  iconColor: AppColors.kTextBoxLabelColor,
-                  desc: 'Logout',
+                InkWell(
+                  onTap: () =>
+                      Navigator.of(context).popAndPushNamed('/sign-in'),
+                  child: const TerminationTile(
+                    svgUrl: 'assets/icons/Logout.svg',
+                    iconColor: AppColors.kTextBoxLabelColor,
+                    desc: 'Logout',
+                  ),
                 ),
-                const TerminationTile(
-                  svgUrl: 'assets/icons/Delete account.svg',
-                  iconColor: AppColors.kOthersColor,
-                  textColor: AppColors.kOthersColor,
-                  desc: 'Delete Account',
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: const Text(
+                              'Account Deletion!!!',
+                              style: TextStyle(
+                                color: AppColors.kOthersColor,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            content: const Text(
+                              'Do you really want to delete your account?',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.of(context)
+                                    .popAndPushNamed('/sign-up'),
+                                child: const Text(
+                                  'Yes, I want',
+                                  style:
+                                      TextStyle(color: AppColors.kOthersColor),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.of(context).pop(),
+                                child: const Text('No, I don\'t'),
+                              ),
+                            ],
+                          );
+                        });
+                  },
+                  child: const TerminationTile(
+                    svgUrl: 'assets/icons/Delete account.svg',
+                    iconColor: AppColors.kOthersColor,
+                    textColor: AppColors.kOthersColor,
+                    desc: 'Delete Account',
+                  ),
                 ),
               ],
             ),

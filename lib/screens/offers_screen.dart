@@ -18,7 +18,7 @@ class OffersScreen extends StatelessWidget {
               Row(
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).pop(),
                     icon: const Icon(
                       Icons.close,
                       size: 30,
@@ -58,9 +58,12 @@ class OffersScreen extends StatelessWidget {
                 ],
               ),
               Expanded(child: Container()),
-              const Padding(
-                padding: EdgeInsets.only(bottom: 20.0),
-                child: AuthButton(label: 'CONTINUE'),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20.0),
+                child: AuthButton(
+                  label: 'CONTINUE',
+                  onTap: () => Navigator.of(context).pushNamed('/feeds'),
+                ),
               ),
             ],
           ),

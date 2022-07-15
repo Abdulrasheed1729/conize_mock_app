@@ -30,6 +30,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               InputTextBox(
+                keyboardType: TextInputType.emailAddress,
                 suffixWidget: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset(
@@ -46,6 +47,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               InputTextBox(
+                obscureText: true,
                 suffixWidget: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset(
@@ -63,8 +65,9 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: 10),
               const InputTextBox(),
               const SizedBox(height: 50),
-              const AuthButton(
+              AuthButton(
                 label: 'SIGN UP',
+                onTap: () => Navigator.of(context).pushNamed('/sign-in'),
               ),
               const SizedBox(height: 5),
               RichText(
